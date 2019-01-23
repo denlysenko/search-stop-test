@@ -1,0 +1,16 @@
+<mat-card>
+  <form class="search-block"
+        (ngSubmit)="onSubmit(stopId.value)">
+    <mat-form-field appearance="outline">
+      <mat-label>Search a Stop</mat-label>
+      <input #stopId
+             matInput
+             placeholder="Enter stopId">
+    </mat-form-field>
+    <div class="button">
+      <button type="submit"
+              mat-raised-button
+              color="primary">Search</button>
+    </div>
+  </form>
+</mat-card>

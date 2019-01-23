@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  min-height: 200px;
+  flex-basis: 50%;
+
+  @media (max-width: 960px) {
+    flex-basis: 80%;
+  }
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.search-block {
+  width: 100%;
+
+  @media (min-width: 960px) {
+    width: 80%;
+  }
+}
+
+.button {
+  text-align: center;
+
+  .mat-raised-button {
+    min-width: 130px;
+    text-transform: uppercase;
+  }
+}
