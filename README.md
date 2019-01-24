@@ -30,6 +30,10 @@ Run `npm run build` or `ng build` to build the project. The build artifacts will
 
 Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
 
-## Time spent to finish this task
+## Valid stop id examples
 
-About 10 hours in total
+st_clair_and_vaughan
+
+union_station
+
+finch_station
