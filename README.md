@@ -14,8 +14,6 @@ Install the Angular CLI
 
 Navigate to app directory
 
-`cd test-task`
-
 Install all dependencies
 
 `npm install`
