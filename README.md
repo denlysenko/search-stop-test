@@ -12,7 +12,7 @@ Install the Angular CLI
 
 `npm install -g @angular/cli`
 
-Navigate to app directory
+Navigate to app root directory
 
 Install all dependencies
 
