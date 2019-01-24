@@ -1,0 +1,40 @@
+<section *ngIf="stops$ | async as stops; else errorOrLoading"
+         class="stop-page">
+  <div *ngFor="let stop of stops"
+       class="stop-item">
+    <mat-card class="header">Stop: {{ stop.stopName }}</mat-card>
+    <table mat-table
+           [dataSource]="stop.stopSchedules"
+           class="table mat-elevation-z2">
+      <ng-container matColumnDef="lineName">
+        <th mat-header-cell
+            *matHeaderCellDef>Line Name</th>
+        <td mat-cell
+            *matCellDef="let element">{{ element.lineName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="departureTime">
+        <th mat-header-cell
+            *matHeaderCellDef>Departure Time</th>
+        <td mat-cell
+            *matCellDef="let element">{{ element.departureTime }}</td>
+      </ng-container>
+      <tr mat-header-row
+          *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row
+          *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</section>
+<ng-template #errorOrLoading>
+  <mat-card class="error">
+    <ng-container *ngIf="error$ | async; else loading">
+      <p>Your search returned no results.</p>
+      <p>
+        <a [routerLink]="['/']">Please, try again</a>
+      </p>
+    </ng-container>
+    <ng-template #loading>
+      Loading...
+    </ng-template>
+  </mat-card>
+</ng-template>
